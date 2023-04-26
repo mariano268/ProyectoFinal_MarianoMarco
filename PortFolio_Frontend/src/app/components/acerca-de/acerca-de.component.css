@@ -1,0 +1,109 @@
+.ContenedorElementos-AcercaDe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 340px;
+    margin: auto;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px
+}
+
+.InfoUsuario-AcercaDe {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 36%;
+    position: relative;
+}
+
+.LogoUsuario-AcercaDe {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 5;
+    position: absolute;
+    top: -70px;
+}
+
+.NombreUsuario-AcercaDe {
+    font-family: 'Roboto' , sans-serif;
+    color: #363636;
+    font-size: 12px;
+}
+
+.TituloUsuario-AcercaDe {
+    font-family: 'Roboto' , sans-serif;
+    color: #636363;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.Informacion-AcercaDe {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.TituloSeccion-AcercaDe {
+    font-family: 'Roboto' , sans-serif;
+    color: #363636;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.TextoSeccion-AcercaDe {
+    font-family: 'Roboto' , sans-serif;
+    color: #636363;
+    font-size: 12px;
+}
+
+@media (min-width: 460px) {
+    
+    .ContenedorElementos-AcercaDe {
+        max-width: 440px;
+    }
+
+    .InfoUsuario-AcercaDe {
+        width: 30%;
+    }
+
+    .Informacion-AcercaDe {
+        width: 65%;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .ContenedorElementos-AcercaDe {
+        max-width: 740px;
+    }
+
+    .InfoUsuario-AcercaDe {
+        width: 20%;
+    }
+
+    .Informacion-AcercaDe {
+        width: 75%;
+    }
+}
+
+@media (min-width: 992px) {
+    
+    .ContenedorElementos-AcercaDe {
+        max-width: 940px;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .ContenedorElementos-AcercaDe {
+        max-width: 1140px;
+    }
+}
