@@ -1,0 +1,130 @@
+.ContenedorTotal-Experiencia {
+    margin-top: 10px;
+}
+
+.ContenedorElementos-Experiencia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 340px;
+    margin: auto;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.Titulo-Experiencia {
+    font-family: 'Roboto' , sans-serif;
+    color: #363636;
+    font-size: 18px;
+}
+
+.Tarjeta-Experiencia {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-top: 0px;
+    border-bottom: 1px solid #eee;
+}
+
+.TarjetaUltima-Experiencia {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.ContenedorImagen-Experiencia {
+    padding: 10px;
+}
+
+.ImagenEmpresa-Experiencia {
+    width: 160px;
+    height: 55px;
+}
+
+.TituloTarjeta-Experiencia {
+    font-family: 'Roboto' , sans-serif;
+    color: #636363;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.TextoTarjeta-Experiencia {
+    font-family: 'Roboto' , sans-serif;
+    color: #363636;
+    font-size: 14px;
+    text-align: justify;
+}
+
+@media (min-width: 460px) {
+
+    .ContenedorElementos-Experiencia {
+        max-width: 440px;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .ContenedorElementos-Experiencia {
+        max-width: 740px;
+    }
+
+    .Tarjeta-Experiencia {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    .TarjetaUltima-Experiencia {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    .ContenedorImagen-Experiencia {
+        width: 30%;
+    }
+
+    .InfoTarjeta-Experiencia {
+        width: 65%;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .ContenedorElementos-Experiencia {
+        max-width: 940px;
+    }
+
+    .ContenedorImagen-Experiencia {
+        width: 20%;
+    }
+
+    .InfoTarjeta-Experiencia {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .ContenedorElementos-Experiencia {
+        max-width: 1140px;
+    }
+
+    .ContenedorImagen-Experiencia {
+        width: 15%;
+    }
+
+    .InfoTarjeta-Experiencia {
+        width: 75%;
+    }
+}

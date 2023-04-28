@@ -1,0 +1,27 @@
+.ContendorGraficos-Skills {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.ContenedorElementos-Skills {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContenedorCircles-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Circle-Skills {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
