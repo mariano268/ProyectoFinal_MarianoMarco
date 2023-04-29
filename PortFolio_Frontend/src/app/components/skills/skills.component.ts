@@ -36,8 +36,8 @@ export class SkillsComponent implements OnInit {
       this.currentBreakpoint = "768px";
     } else if(this.breakpointObserver.isMatched('(min-width: 460px)')) {
       this.currentBreakpoint = "460px";
-    } else if(this.breakpointObserver.isMatched('(min-width: 368px)')) {
-      this.currentBreakpoint = "368px";
+    } else if(this.breakpointObserver.isMatched('(min-width: 1px)')) {
+      this.currentBreakpoint = "1px";
     }
   }
 }

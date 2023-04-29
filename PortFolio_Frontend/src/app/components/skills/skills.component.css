@@ -1,6 +1,5 @@
-.ContendorGraficos-Skills {
-    max-width: 1140px;
-    margin: auto;
+.ContenedorTotal-Skills {
+    margin-top: 10px;
 }
 
 .ContenedorElementos-Skills {
@@ -9,6 +8,18 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border: 1px solid #eee;
+    max-width: 340px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.Titulo-Skills {
+    font-family: 'Roboto' , sans-serif;
+    color: #363636;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .ContenedorCircles-skills {
@@ -16,6 +27,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 10px;
 }
 
 .Circle-Skills {
@@ -24,4 +36,59 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.TituloCircle-Skills {
+    font-family: 'Roboto' , sans-serif;
+    color: #636363;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+@media (min-width: 460px) {
+
+    .ContenedorElementos-Skills {
+        max-width: 440px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .ContenedorElementos-Skills {
+        max-width: 740px;
+    }
+
+    .Titulo-Skills {
+        margin-bottom: 0px;
+    }
+
+    .Circle-Skills {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .ContenedorElementos-Skills {
+        max-width: 940px;
+    }
+
+    .Circle-Skills {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .ContenedorElementos-Skills {
+        max-width: 1140px;
+    }
+
+    .Circle-Skills {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
 }
