@@ -1,0 +1,20 @@
+footer {
+    background-color: black;
+}
+
+.ContenedorElementos-Footer {
+    max-width: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 50px;
+}
+
+.TextoFooter {
+    font-family: 'Roboto' , sans-serif;
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+}

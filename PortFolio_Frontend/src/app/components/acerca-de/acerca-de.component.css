@@ -49,6 +49,60 @@
     justify-content: center;
     align-items: flex-start;
     width: 60%;
+    position: relative;
+}
+
+.Editar-AcercaDe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    z-index: 5;
+    background-color: #ffffff;
+    border: solid 1px #000000;
+}
+
+.EditarImagen-AcercaDe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 100px;
+    top: -45px;
+    z-index: 20;
+    background-color: #ffffff;
+    border: solid 1px #000000;
+}
+
+.EditarInfo-AcercaDe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 30px;
+    top: 2px;
+    z-index: 20;
+    background-color: #ffffff;
+    border: solid 1px #000000;
+}
+
+.LogoEditar-AcercaDe {
+    font-size: 14px;
+    color: #000000;
 }
 
 .TituloSeccion-AcercaDe {
