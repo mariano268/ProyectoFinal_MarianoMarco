@@ -1,0 +1,142 @@
+.ContenedorTotal-Proyectos {
+    margin-top: 10px;
+}
+
+.ContendorElementos-Proyectos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 340px;
+    margin: auto;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.TituloSeccion-Proyectos {
+    font-family: 'Roboto' , sans-serif;
+    color: #363636;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.Item-Proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.TituloItem-Proyectos {
+    font-family: 'Roboto' , sans-serif;
+    color: #636363;
+    font-size: 16px;
+}
+
+.ContenedorImagenItem-Proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.ImagenItem-Proyectos {
+    width: 200px;
+    height: 120px;
+}
+
+.DescripcionItem-Proyectos {
+    font-family: 'Roboto' , sans-serif;
+    color: #363636;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.UltimoItem-Proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+@media (min-width: 460px) {
+
+    .ContendorElementos-Proyectos {
+        max-width: 440px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .ContendorElementos-Proyectos {
+        max-width: 740px;
+    }
+
+    .Item-Proyectos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .UltimoItem-Proyectos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .ContenedorImagenItem-Proyectos {
+        width: 30%;
+        justify-content: flex-start;
+        padding-left: 0px;
+    }
+
+    .DescripcionItem-Proyectos {
+        width: 70%;
+        padding: 10px;
+        padding-right: 0px;
+    }
+
+    .TituloItem-Proyectos {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .ContendorElementos-Proyectos {
+        max-width: 940px;
+    }
+
+    .ContenedorImagenItem-Proyectos {
+        width: 20%;
+    }
+
+    .DescripcionItem-Proyectos {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .ContendorElementos-Proyectos {
+        max-width: 1140px;
+        padding: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .ContenedorImagenItem-Proyectos {
+        width: 20%;
+    }
+
+    .DescripcionItem-Proyectos {
+        width: 75%;
+    }
+}
