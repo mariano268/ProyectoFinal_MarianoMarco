@@ -29,6 +29,7 @@
     padding: 10px;
     padding-top: 0px;
     border-bottom: 1px solid #eee;
+    position: relative;
 }
 
 .TarjetaUltima-Experiencia {
@@ -39,6 +40,7 @@
     align-items: center;
     padding: 10px;
     padding-top: 0px;
+    position: relative;
 }
 
 .ContenedorImagen-Experiencia {
@@ -62,6 +64,44 @@
     color: #363636;
     font-size: 14px;
     text-align: justify;
+}
+
+.Editar-Experiencia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    top: 10px;
+    right: 40px;
+    position: absolute;
+    z-index: 20;
+    border: none;
+}
+
+.LogoEditar-Experiencia {
+    font-size: 14px;
+    color: #363636;
+}
+
+.Eliminar-Experiencia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    top: 10px;
+    right: 5px;
+    position: absolute;
+    z-index: 20;
+    border: none;
+}
+
+.LogoEliminar-Experiencia {
+    font-size: 14px;
+    color: #363636;
 }
 
 @media (min-width: 460px) {
@@ -97,6 +137,22 @@
         width: 65%;
     }
 
+    .Editar-Experiencia {
+        top: 5px;
+    }
+
+    .Eliminar-Experiencia {
+        top: 5px;
+    }
+
+    .LogoEditar-Experiencia {
+        font-size: 16px;
+    }
+
+    .LogoEliminar-Experiencia {
+        font-size: 16px;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -126,5 +182,13 @@
 
     .InfoTarjeta-Experiencia {
         width: 75%;
+    }
+
+    .Editar-Experiencia {
+        top: 10px;
+    }
+
+    .Eliminar-Experiencia {
+        top: 10px;
     }
 }
