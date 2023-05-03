@@ -1,13 +1,13 @@
-package com.portfolio.ProyectoFinal;
+package com.portfolio.MarianoMarco;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProyectoFinalApplication {
+public class MarianoMarcoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProyectoFinalApplication.class, args);
+		SpringApplication.run(MarianoMarcoApplication.class, args);
 	}
 
 }

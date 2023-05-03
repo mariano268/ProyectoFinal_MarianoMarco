@@ -1,10 +1,10 @@
-package com.portfolio.ProyectoFinal;
+package com.portfolio.MarianoMarco;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProyectoFinalApplicationTests {
+class MarianoMarcoApplicationTests {
 
 	@Test
 	void contextLoads() {
