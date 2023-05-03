@@ -22,10 +22,17 @@
     </div>
     <div class = "ContenedorComponentes-Login">
         <i class="Logo-Login fa-solid fa-user"></i>
-        <form class = "Form-Login" action="">
-            <input class = "Input-Login" type="text" name="" id="" placeholder = "Usuario">
-            <input class = "Input-Login" type="password" placeholder = "Contraseña">
-            <button class = "Button-Login">Ingresar</button>
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class = "Form-Login">
+            <div class = "ContenedorError" *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
+                <h3 *ngIf="NombreUsuario?.hasError('required')" class = "TextoError">*Este campo es obligatorio</h3>
+            </div>
+            <input class = "Input-Login" formControlName="nombreUsuario" type="text" name="" id="" placeholder = "Usuario">
+            <div class = "ContenedorError" *ngIf="Password?.errors && Password?.touched">
+                <h3 *ngIf="Password?.hasError('required')" class = "TextoError">*Este campo es obligatorio</h3>
+            </div>
+            <input class = "Input-Login" formControlName="password" type="password" placeholder = "Contraseña">
+            
+            <button type="submit" class = "Button-Login">Ingresar</button>
         </form>
     </div>
 </div>

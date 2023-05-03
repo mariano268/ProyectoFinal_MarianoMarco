@@ -156,6 +156,17 @@ app-footer {
     width: 40%;
 }
 
+.ContenedorError {
+    width: 75%;
+}
+
+.TextoError {
+    font-family: 'Roboto' , sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: red;
+}
+
 @media (min-width: 460px) {
     
     .ContenedorOganizador-Header {
