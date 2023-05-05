@@ -13,7 +13,8 @@
                     <i class="LogoRed-Header fa-brands fa-twitter"></i>
                 </div>
                 <div class = "Login-Header">
-                    <a class = "EnlaceLogin-Header" routerLink="/login" aria-current="page">Login</a>
+                    <a class = "EnlaceLogin-Header" routerLink="/login" *ngIf="!isLogged" aria-current="page">Login</a>
+                    <a class = "EnlaceLogin-Header" (click)="onLogOut()" *ngIf="isLogged" aria-current="page">Logout</a>
                 </div>
             </div>
         </div>
