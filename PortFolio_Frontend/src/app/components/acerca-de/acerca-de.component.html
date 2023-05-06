@@ -1,15 +1,15 @@
 <div class = "ContenedorElementos-AcercaDe">
     <div class = "InfoUsuario-AcercaDe">
-        <a *ngIf="isAdmin" href="#" class = "EditarImagen-AcercaDe"><i class="LogoEditar-AcercaDe fa-solid fa-pencil"></i></a>
-        <a *ngIf="isAdmin" href="#" class = "EditarInfo-AcercaDe"><i class="LogoEditar-AcercaDe fa-solid fa-pencil"></i></a>
-        <img class = "LogoUsuario-AcercaDe" src="../assets/ImagenUsuario.jpg" alt="">
+        <a *ngIf="isAdmin" routerLink="/editPersona/1" class = "EditarImagen-AcercaDe"><i class="LogoEditar-AcercaDe fa-solid fa-pencil"></i></a>
+        <a *ngIf="isAdmin" routerLink="/editPersona/1" class = "EditarInfo-AcercaDe"><i class="LogoEditar-AcercaDe fa-solid fa-pencil"></i></a>
+        <img class = "LogoUsuario-AcercaDe" src="{{persona.imagen}}" alt="">
         <h3 class = "NombreUsuario-AcercaDe">{{persona.nombre}} {{persona.apellido}}</h3>
         <h3 class = "TituloUsuario-AcercaDe">Full Stack Developer Jr</h3>
     </div>
     
     <div class = "Informacion-AcercaDe">
-        <a *ngIf="isAdmin" href="#" class = "Editar-AcercaDe"><i class="LogoEditar-AcercaDe fa-solid fa-pencil"></i></a>
+        <a *ngIf="isAdmin" routerLink="/editPersona/1" class = "Editar-AcercaDe"><i class="LogoEditar-AcercaDe fa-solid fa-pencil"></i></a>
         <h3 class = "TituloSeccion-AcercaDe">Acerca de mi</h3>
-        <p class = "TextoSeccion-AcercaDe">Soy Mariano Marco, curso 5to año de Ingeniería en Electrónica en la UTN, y tengo un emprendimiento de diseño y fabricación de equipos eletrónicos, algunos propios y otros para terceros.</p>
+        <p class = "TextoSeccion-AcercaDe">{{persona.descripcion}}</p>
     </div>
 </div>

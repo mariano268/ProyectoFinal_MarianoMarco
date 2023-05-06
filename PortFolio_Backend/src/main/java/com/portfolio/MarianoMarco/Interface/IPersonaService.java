@@ -2,19 +2,23 @@ package com.portfolio.MarianoMarco.Interface;
 
 import com.portfolio.MarianoMarco.Entity.Persona;
 import java.util.List;
+import java.util.Optional;
 
 
 public interface IPersonaService {
-    //Traer una lista de personas
-    public List<Persona> getPersona();
     
-    //Guardar una persona
-    public void savePersona(Persona persona);
+    public List<Persona> list();
     
-    //EliminarPersona
-    public void deletePersona(Long id);
+    public void save(Persona persona);
     
-    //Buscar una persona
-    public Persona findPersona(Long id);
+    public void delete(int id);
+    
+    public Optional<Persona> getOne(int id);
+    
+    public boolean existsById(int id);
+    
+    public boolean existsByNombre(String nombre);
+    
+    public Optional<Persona> getByNombre(String nombre);
 }
 

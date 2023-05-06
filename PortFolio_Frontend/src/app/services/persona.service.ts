@@ -9,9 +9,13 @@ import { Observable } from 'rxjs';
 export class PersonaService {
   URL = "http://localhost:8080/persona/";
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  public getPersona(): Observable<Persona> {
-    return this.http.get<Persona>(this.URL+ 'traer');
+  public detail(id: number): Observable<Persona>{
+    return this.httpClient.get<Persona>(this.URL + `detail/${id}`);
+  }
+
+  public update(id: number , persona: Persona): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `editar/${id}` , persona);
   }
 }
