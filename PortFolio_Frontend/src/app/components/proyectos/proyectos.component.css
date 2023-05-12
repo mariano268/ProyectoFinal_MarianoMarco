@@ -16,6 +16,10 @@
     padding: 10px;
 }
 
+.ContenedorFor-Proyectos {
+    width: 100%;
+}
+
 .TituloSeccion-Proyectos {
     font-family: 'Roboto' , sans-serif;
     color: #363636;
@@ -28,11 +32,21 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 10px;
     border-bottom: 1px solid #eee;
     position: relative;
 }
+
+.ContenedorImagenDescripcion-Proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 
 .TituloItem-Proyectos {
     font-family: 'Roboto' , sans-serif;
@@ -154,6 +168,11 @@
 
     .LogoEliminar-Proyectos {
         font-size: 16px;
+    }
+
+    .ContenedorImagenDescripcion-Proyectos {
+        flex-direction: row;
+        align-items: flex-start;
     }
 }
 

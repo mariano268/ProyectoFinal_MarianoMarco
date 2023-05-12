@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
+import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 
 const routes: Routes = [
   {path: "" , component:HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: "editPersona/:id" , component: EditAcercaDeComponent},
   {path: "editExperiencia/:id" , component: EditExperienciaComponent},
   {path: "editEducacion/:id" , component: EditEducacionComponent},
+  {path: "editProyecto/:id" , component: EditProyectosComponent},
 ];
 
 @NgModule({

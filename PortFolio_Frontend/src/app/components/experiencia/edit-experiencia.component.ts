@@ -19,6 +19,7 @@ export class EditExperienciaComponent {
     public imageService: ImageService) {}
 
   ngOnInit(): void {
+    this.imageService.clearUrl();
     const id = this.activatedRouter.snapshot.params['id'];
     this.experienciaService.detail(id).subscribe(data => {
       this.experiencia = data;

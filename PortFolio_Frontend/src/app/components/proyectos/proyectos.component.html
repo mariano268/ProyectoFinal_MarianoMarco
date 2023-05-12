@@ -1,41 +1,18 @@
 <div class = "ContenedorTotal-Proyectos">
     <div class = "ContendorElementos-Proyectos">
         <h3 class = "TituloSeccion-Proyectos">Proyectos</h3>
-        <div class = "Item-Proyectos">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Proyectos"><i class="LogoEditar-Proyectos fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Proyectos"><i class="LogoEliminar-Proyectos fa-solid fa-trash"></i></a>
-            <h3 class = "TituloItem-Proyectos">TTAiData01</h3>
-            <div class = "ContenedorImagenItem-Proyectos">
-                <img class = "ImagenItem-Proyectos" src="../assets/ImagenProyectos.jpg" alt="">
+        <div class = "ContenedorFor-Proyectos" *ngFor="let proyecto of proyecto">
+            <div class = "Item-Proyectos">
+                <a *ngIf="isAdmin" routerLink="/editProyecto/{{proyecto.id}}" class = "Editar-Proyectos"><i class="LogoEditar-Proyectos fa-solid fa-pencil"></i></a>
+                <a *ngIf="isAdmin" (click)="delete(proyecto.id)" class = "Eliminar-Proyectos"><i class="LogoEliminar-Proyectos fa-solid fa-trash"></i></a>
+                <h3 class = "TituloItem-Proyectos">{{proyecto.nombre}}</h3>
+                <div class = ContenedorImagenDescripcion-Proyectos>
+                    <div class = "ContenedorImagenItem-Proyectos">
+                        <img class = "ImagenItem-Proyectos" src="{{proyecto.imagen}}" alt="">
+                    </div>
+                    <p class = "DescripcionItem-Proyectos">{{proyecto.descripcion}}</p>
+                </div>
             </div>
-            <p class = "DescripcionItem-Proyectos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus repudiandae ut tempore inventore, maiores quibusdam harum obcaecati earum, ullam fuga quaerat possimus. Cumque molestias aut praesentium consectetur quam dolor nobis!</p>
-        </div>
-        <div class = "Item-Proyectos">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Proyectos"><i class="LogoEditar-Proyectos fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Proyectos"><i class="LogoEliminar-Proyectos fa-solid fa-trash"></i></a>
-            <h3 class = "TituloItem-Proyectos">Fresadora</h3>
-            <div class = "ContenedorImagenItem-Proyectos">
-                <img class = "ImagenItem-Proyectos" src="../assets/ImagenProyectos.jpg" alt="">
-            </div>
-            <p class = "DescripcionItem-Proyectos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus repudiandae ut tempore inventore, maiores quibusdam harum obcaecati earum, ullam fuga quaerat possimus. Cumque molestias aut praesentium consectetur quam dolor nobis!</p>
-        </div>
-        <div class = "Item-Proyectos">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Proyectos"><i class="LogoEditar-Proyectos fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Proyectos"><i class="LogoEliminar-Proyectos fa-solid fa-trash"></i></a>
-            <h3 class = "TituloItem-Proyectos">Pick and Place</h3>
-            <div class = "ContenedorImagenItem-Proyectos">
-                <img class = "ImagenItem-Proyectos" src="../assets/ImagenProyectos.jpg" alt="">
-            </div>
-            <p class = "DescripcionItem-Proyectos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus repudiandae ut tempore inventore, maiores quibusdam harum obcaecati earum, ullam fuga quaerat possimus. Cumque molestias aut praesentium consectetur quam dolor nobis!</p>
-        </div>
-        <div class = "UltimoItem-Proyectos">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Proyectos"><i class="LogoEditar-Proyectos fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Proyectos"><i class="LogoEliminar-Proyectos fa-solid fa-trash"></i></a>
-            <h3 class = "TituloItem-Proyectos">Portfolio</h3>
-            <div class = "ContenedorImagenItem-Proyectos">
-                <img class = "ImagenItem-Proyectos" src="../assets/ImagenProyectos.jpg" alt="">
-            </div>
-            <p class = "DescripcionItem-Proyectos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus repudiandae ut tempore inventore, maiores quibusdam harum obcaecati earum, ullam fuga quaerat possimus. Cumque molestias aut praesentium consectetur quam dolor nobis!</p>
         </div>
     </div>
 </div>

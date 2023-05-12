@@ -129,22 +129,18 @@
     .Tarjeta-Experiencia {
         flex-direction: row;
         align-items: flex-start;
-        justify-content: space-evenly;
-        padding: 10px;
-    }
-
-    .TarjetaUltima-Experiencia {
-        flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
         padding: 10px;
     }
 
     .ContenedorImagen-Experiencia {
         width: 30%;
+        padding-left: 20px;
     }
 
     .InfoTarjeta-Experiencia {
         width: 65%;
+        padding-right: 20px;
     }
 
     .Editar-Experiencia {
@@ -199,10 +195,10 @@
     }
 
     .Editar-Experiencia {
-        top: 10px;
+        top: 5px;
     }
 
     .Eliminar-Experiencia {
-        top: 10px;
+        top: 5px;
     }
 }

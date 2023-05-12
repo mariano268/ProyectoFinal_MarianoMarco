@@ -18,6 +18,7 @@ export class EditEducacionComponent {
     public imageService: ImageService) {}
 
     ngOnInit(): void {
+      this.imageService.clearUrl();
       const id = this.activatedRouter.snapshot.params['id'];
       this.educacionService.detail(id).subscribe(data => {
         this.educacion = data;

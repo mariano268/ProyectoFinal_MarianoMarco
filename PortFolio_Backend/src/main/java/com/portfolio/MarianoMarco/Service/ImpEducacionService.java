@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
-public class ImpEducacionRepository implements IEducacionService{
+public class ImpEducacionService implements IEducacionService{
     @Autowired IEducacionRepository ieducacionRepository;
     
     @Override
