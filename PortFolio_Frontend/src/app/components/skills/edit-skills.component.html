@@ -1,0 +1,29 @@
+<div class = "ContenedorElementos-Header">
+    <div class = "ContenedorOganizador-Header">
+        <div class = "ContenedorLogo-Header">
+            <a href=""><img class = "Logo-Header" src="../assets/APLogo.png" alt=""></a>
+            <h3 class = "TextoLogo-Header">#Yo programo</h3>
+        </div>
+    
+        <div class = "Navegador-Header">
+            <div class = "RedesSociales-Header">
+                <i class="LogoRed-Header fa-brands fa-instagram"></i>
+                <i class="LogoRed-Header fa-brands fa-facebook"></i>
+                <i class="LogoRed-Header fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = ContenedorElementos-Edit>
+    <div class = "ContenedorFlex-Edit">
+        <h3 class = "Titulo-Edit">Editar habilidad</h3>
+        <form class = "Form-Edit" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <input class = "Input-Edit" type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="habilidad.nombre" required>
+            <input class = "Input-Edit" type="number" name="porcentaje" id="porcentaje" placeholder="Porcentaje" [(ngModel)]="habilidad.porcentaje" required>
+            <button class = "Button-Edit" type = "submit">EDITAR</button>
+        </form>
+    </div>
+</div>
+
+<app-footer></app-footer>

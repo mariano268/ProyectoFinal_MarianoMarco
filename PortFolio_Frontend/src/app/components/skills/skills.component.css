@@ -36,6 +36,45 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.Editar-Skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    z-index: 20;
+    border: none;
+}
+
+.LogoEditar-Skills {
+    font-size: 14px;
+    color: #363636;
+}
+
+.Eliminar-Skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    top: 10px;
+    right: -10px;
+    position: absolute;
+    z-index: 20;
+    border: none;
+}
+
+.LogoEliminar-Skills {
+    font-size: 14px;
+    color: #363636;
 }
 
 .TituloCircle-Skills {
@@ -49,6 +88,17 @@
 
     .ContenedorElementos-Skills {
         max-width: 440px;
+    }
+
+    .Editar-Skills {
+        top: 25px;
+        right: 10px;
+    }
+    
+    
+    .Eliminar-Skills {
+        top: 25px;
+        right: -10px;
     }
 }
 
@@ -91,4 +141,14 @@
         padding-right: 40px;
     }
 
+    .Editar-Skills {
+        top: 25px;
+        right: 30px;
+    }
+    
+    
+    .Eliminar-Skills {
+        top: 25px;
+        right: 10px;
+    }
 }

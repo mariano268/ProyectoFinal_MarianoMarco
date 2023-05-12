@@ -24,6 +24,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
+import { EditSkillsComponent } from './components/skills/edit-skills.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos.co
     EditExperienciaComponent,
     EditEducacionComponent,
     EditProyectosComponent,
+    EditSkillsComponent,
   ],
   imports: [
     BrowserModule,

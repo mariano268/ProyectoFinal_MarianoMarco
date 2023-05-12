@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0px;
+    min-height: 100vh;
+    padding-bottom: 522px;
+    position: relative;
+}
+
+app-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.ContenedorElementos-Header {
+    width: 100%;
+    background-color: black;
+}
+
+.ContenedorOganizador-Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 340px;
+    margin: auto;
+    padding: 10px;
+}
+
+.ContenedorLogo-Header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo-Header {
+    color: white;
+    width: 80px;
+    height: 30px;
+}
+
+.TextoLogo-Header {
+    color: white;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.Navegador-Header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.RedesSociales-Header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.LogoRed-Header {
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.EnlaceLogin-Header {
+    color: white;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 16px;
+}
+
+.ContenedorElementos-Edit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 320px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.ContenedorFlex-Edit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Form-Edit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Titulo-Edit {
+    font-family: 'Roboto' , sans-serif;
+    color: #363636;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.Input-Edit {
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #636363;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.ContenedorInputImg-Edit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.Label-Edit {
+    font-family: 'Roboto' , sans-serif;
+    font-weight: bold;
+    color: #363636;
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.InputFile-Edit {
+    width: 100%;
+}
+
+.Button-Edit {
+    font-family: 'Roboto' , sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: #363636;
+    border: 1px solid #363636;
+    border-radius: 5px;
+    height: 25px;
+    width: 30%;
+    margin-top: 15px;
+}
+
+@media (min-width: 460px) {
+    
+    .ContenedorOganizador-Header {
+        max-width: 440px;
+    }
+
+    .ContenedorTotal-Login{
+        max-width: 320px;
+    }
+
+    .Logo-Login {
+        font-size: 45px;
+    }
+
+    .Input-Login {
+        margin-bottom: 20px;
+        width: 75%;
+        height: 35px;
+    }
+
+    .Button-Login {
+        height: 25px;
+    }
+
+    .ContenedorElementos-Edit {
+        max-width: 400px;
+    }
+
+    .Button-Edit {
+        width: 25%;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .ContenedorOganizador-Header {
+        max-width: 740px;
+    }
+
+    .ContenedorLogo-Header {
+        flex-direction: row;
+    }
+
+    .Logo-Header {
+        width: 120px;
+        height: 40px;
+    }
+
+    .TextoLogo-Header {
+        margin-top: 0px;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .Navegador-Header {
+        flex-direction: row;
+    }
+
+    .LogoRed-Header {
+        color: white;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .EnlaceLogin-Header {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    .ContenedorElementos-Edit {
+        max-width: 500px;
+    }
+
+    .ContenedorFlex-Edit {
+        align-items: flex-start;
+        margin: auto;
+    }
+
+    .Button-Edit {
+        width: 20%;
+    }
+}
+
+@media (min-width: 992px) {
+    .ContenedorOganizador-Header {
+        max-width: 940px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ContenedorOganizador-Header {
+        max-width: 1140px;
+    }
+}

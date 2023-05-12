@@ -9,5 +9,4 @@ export class Educacion {
         this.descripcion = descripcion;
         this.imagen = imagen;
     }
-
 }

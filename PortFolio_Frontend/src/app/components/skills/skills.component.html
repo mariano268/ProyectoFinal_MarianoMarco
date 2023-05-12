@@ -3,393 +3,128 @@
         <h3 class = "Titulo-Skills">Habilidades</h3>
         <div class = "ContendorGraficos-Skills" [ngSwitch] = "currentBreakpoint">
             <div class = "ContenedorCircles-skills"  *ngSwitchCase="'1px'">
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Electronica</h3>
-                    <circle-progress
-                        [percent]="95"
-                        [radius]="50"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Programacion</h3>
-                    <circle-progress
-                        [percent]="75"
-                        [radius]="50"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Paquete office</h3>
-                    <circle-progress
-                        [percent]="100"
-                        [radius]="50"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Microcontroladores</h3>
-                    <circle-progress
-                        [percent]="90"
-                        [radius]="50"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
+                <div *ngFor="let habilidad of habilidad" class = "ContenedorFor-skills">
+                    <div class = "Circle-Skills">
+                        <a *ngIf="isAdmin" routerLink="/editHabilidad/{{habilidad.id}}" class = "Editar-Skills"><i class="LogoEditar-Skills fa-solid fa-pencil"></i></a>
+                        <a *ngIf="isAdmin" (click)="delete(habilidad.id)" class = "Eliminar-Skills"><i class="LogoEliminar-Skills fa-solid fa-trash"></i></a>
+                        <h3 class = "TituloCircle-Skills">{{habilidad.nombre}}</h3>
+                        <circle-progress
+                            [percent]="(habilidad.porcentaje)"
+                            [radius]="50"
+                            [outerStrokeWidth]="6"
+                            [innerStrokeWidth]="4"
+                            [outerStrokeColor]="'#78C000'"
+                            [innerStrokeColor]="'#C7E596'"
+                            [animation]="true"
+                            [animationDuration]="300"
+                            [showSubtitle]="false"
+                            [titleFontSize]="'20'"
+                            [titleFontWeight]="'800'"
+                            [unitsFontWeight]="'800'"
+                            [titleColor]="'#636363'"
+                            [unitsColor]="'#636363'"
+                        ></circle-progress>
+                    </div>
                 </div>
             </div>
             <div class = "ContenedorCircles-skills"  *ngSwitchCase="'460px'">
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Electronica</h3>
-                    <circle-progress
-                        [percent]="95"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Programacion</h3>
-                    <circle-progress
-                        [percent]="75"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Paquete office</h3>
-                    <circle-progress
-                        [percent]="100"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Microcontroladores</h3>
-                    <circle-progress
-                        [percent]="90"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
+                <div *ngFor="let habilidad of habilidad" class = "ContenedorFor-skills">
+                    <div class = "Circle-Skills">
+                        <a *ngIf="isAdmin" routerLink="/editHabilidad/{{habilidad.id}}" class = "Editar-Skills"><i class="LogoEditar-Skills fa-solid fa-pencil"></i></a>
+                        <a *ngIf="isAdmin" (click)="delete(habilidad.id)" class = "Eliminar-Skills"><i class="LogoEliminar-Skills fa-solid fa-trash"></i></a>
+                        <h3 class = "TituloCircle-Skills">{{habilidad.nombre}}</h3>
+                        <circle-progress
+                            [percent]="(habilidad.porcentaje)"
+                            [radius]="50"
+                            [outerStrokeWidth]="6"
+                            [innerStrokeWidth]="4"
+                            [outerStrokeColor]="'#78C000'"
+                            [innerStrokeColor]="'#C7E596'"
+                            [animation]="true"
+                            [animationDuration]="300"
+                            [showSubtitle]="false"
+                            [titleFontSize]="'20'"
+                            [titleFontWeight]="'800'"
+                            [unitsFontWeight]="'800'"
+                            [titleColor]="'#636363'"
+                            [unitsColor]="'#636363'"
+                        ></circle-progress>
+                    </div>
                 </div>
             </div>
             <div class = "ContenedorCircles-skills"  *ngSwitchCase="'768px'">
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Electronica</h3>
-                    <circle-progress
-                        [percent]="95"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Programacion</h3>
-                    <circle-progress
-                        [percent]="75"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Paquete office</h3>
-                    <circle-progress
-                        [percent]="100"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Microcontroladores</h3>
-                    <circle-progress
-                        [percent]="90"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
+                <div *ngFor="let habilidad of habilidad" class = "ContenedorFor-skills">
+                    <div class = "Circle-Skills">
+                        <a *ngIf="isAdmin" routerLink="/editHabilidad/{{habilidad.id}}" class = "Editar-Skills"><i class="LogoEditar-Skills fa-solid fa-pencil"></i></a>
+                        <a *ngIf="isAdmin" (click)="delete(habilidad.id)" class = "Eliminar-Skills"><i class="LogoEliminar-Skills fa-solid fa-trash"></i></a>
+                        <h3 class = "TituloCircle-Skills">{{habilidad.nombre}}</h3>
+                        <circle-progress
+                            [percent]="(habilidad.porcentaje)"
+                            [radius]="50"
+                            [outerStrokeWidth]="6"
+                            [innerStrokeWidth]="4"
+                            [outerStrokeColor]="'#78C000'"
+                            [innerStrokeColor]="'#C7E596'"
+                            [animation]="true"
+                            [animationDuration]="300"
+                            [showSubtitle]="false"
+                            [titleFontSize]="'20'"
+                            [titleFontWeight]="'800'"
+                            [unitsFontWeight]="'800'"
+                            [titleColor]="'#636363'"
+                            [unitsColor]="'#636363'"
+                        ></circle-progress>
+                    </div>
                 </div>
             </div>
             <div class = "ContenedorCircles-skills"  *ngSwitchCase="'992px'">
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Electronica</h3>
-                    <circle-progress
-                        [percent]="95"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Programacion</h3>
-                    <circle-progress
-                        [percent]="75"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Paquete office</h3>
-                    <circle-progress
-                        [percent]="100"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Microcontroladores</h3>
-                    <circle-progress
-                        [percent]="90"
-                        [radius]="60"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
+                <div *ngFor="let habilidad of habilidad" class = "ContenedorFor-skills">
+                    <div class = "Circle-Skills">
+                        <a *ngIf="isAdmin" routerLink="/editHabilidad/{{habilidad.id}}" class = "Editar-Skills"><i class="LogoEditar-Skills fa-solid fa-pencil"></i></a>
+                        <a *ngIf="isAdmin" (click)="delete(habilidad.id)" class = "Eliminar-Skills"><i class="LogoEliminar-Skills fa-solid fa-trash"></i></a>
+                        <h3 class = "TituloCircle-Skills">{{habilidad.nombre}}</h3>
+                        <circle-progress
+                            [percent]="(habilidad.porcentaje)"
+                            [radius]="50"
+                            [outerStrokeWidth]="6"
+                            [innerStrokeWidth]="4"
+                            [outerStrokeColor]="'#78C000'"
+                            [innerStrokeColor]="'#C7E596'"
+                            [animation]="true"
+                            [animationDuration]="300"
+                            [showSubtitle]="false"
+                            [titleFontSize]="'20'"
+                            [titleFontWeight]="'800'"
+                            [unitsFontWeight]="'800'"
+                            [titleColor]="'#636363'"
+                            [unitsColor]="'#636363'"
+                        ></circle-progress>
+                    </div>
                 </div>
             </div>
             <div class = "ContenedorCircles-skills"  *ngSwitchCase="'1200px'">
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Electronica</h3>
-                    <circle-progress
-                        [percent]="95"
-                        [radius]="70"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Programacion</h3>
-                    <circle-progress
-                        [percent]="75"
-                        [radius]="70"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Paquete office</h3>
-                    <circle-progress
-                        [percent]="100"
-                        [radius]="70"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
-                </div>
-                <div class = "Circle-Skills">
-                    <h3 class = "TituloCircle-Skills">Microcontroladores</h3>
-                    <circle-progress
-                        [percent]="90"
-                        [radius]="70"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]="'#78C000'"
-                        [innerStrokeColor]="'#C7E596'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        [showSubtitle]="false"
-                        [titleFontSize]="'20'"
-                        [titleFontWeight]="'800'"
-                        [unitsFontWeight]="'800'"
-                        [titleColor]="'#636363'"
-                        [unitsColor]="'#636363'"
-                    ></circle-progress>
+                <div *ngFor="let habilidad of habilidad" class = "ContenedorFor-skills">
+                    <div class = "Circle-Skills">
+                        <a *ngIf="isAdmin" routerLink="/editHabilidad/{{habilidad.id}}" class = "Editar-Skills"><i class="LogoEditar-Skills fa-solid fa-pencil"></i></a>
+                        <a *ngIf="isAdmin" (click)="delete(habilidad.id)" class = "Eliminar-Skills"><i class="LogoEliminar-Skills fa-solid fa-trash"></i></a>
+                        <h3 class = "TituloCircle-Skills">{{habilidad.nombre}}</h3>
+                        <circle-progress
+                            [percent]="(habilidad.porcentaje)"
+                            [radius]="50"
+                            [outerStrokeWidth]="6"
+                            [innerStrokeWidth]="4"
+                            [outerStrokeColor]="'#78C000'"
+                            [innerStrokeColor]="'#C7E596'"
+                            [animation]="true"
+                            [animationDuration]="300"
+                            [showSubtitle]="false"
+                            [titleFontSize]="'20'"
+                            [titleFontWeight]="'800'"
+                            [unitsFontWeight]="'800'"
+                            [titleColor]="'#636363'"
+                            [unitsColor]="'#636363'"
+                        ></circle-progress>
+                    </div>
                 </div>
             </div>
         </div>
