@@ -1,50 +1,19 @@
 <div class = "ContenedorTotal-Experiencia">
     <div class = "ContenedorElementos-Experiencia">
         <h3 class = Titulo-Experiencia>Experiencia</h3>
-        <div class = "Tarjeta-Experiencia">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Experiencia"><i class="LogoEditar-Experiencia fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Experiencia"><i class="LogoEliminar-Experiencia fa-solid fa-trash"></i></a>
-            <div class = "ContenedorImagen-Experiencia">
-                <img class = "ImagenEmpresa-Experiencia" src="../../../assets/LogoMegared.png" alt="">
+        <div class = "ContenedorFor" *ngFor="let experiencia of experiencia">
+            <div class = "Tarjeta-Experiencia">
+                <a *ngIf="isAdmin" routerLink="/editExperiencia/{{experiencia.id}}" class = "Editar-Experiencia"><i class="LogoEditar-Experiencia fa-solid fa-pencil"></i></a>
+                <a *ngIf="isAdmin" href="#" class = "Eliminar-Experiencia"><i class="LogoEliminar-Experiencia fa-solid fa-trash"></i></a>
+                <div class = "ContenedorImagen-Experiencia">
+                    <img class = "ImagenEmpresa-Experiencia" src="{{experiencia.imagen}}" alt="">
+                </div>
+                <div class = "InfoTarjeta-Experiencia">
+                    <h3 class = "TituloTarjeta-Experiencia">{{experiencia.nombre}}</h3>
+                    <p class = "TextoTarjeta-Experiencia">{{experiencia.descripcion}}</p>
+                </div>
             </div>
-            <div class = "InfoTarjeta-Experiencia">
-                <h3 class = "TituloTarjeta-Experiencia">Megared</h3>
-                <p class = "TextoTarjeta-Experiencia">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora qui mollitia voluptas, possimus consectetur tempore esse inventore eum obcaecati ducimus expedita neque harum aut sequi hic quibusdam alias officiis. Fuga.</p>
-            </div>
-        </div>
-        <div class = "Tarjeta-Experiencia">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Experiencia"><i class="LogoEditar-Experiencia fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Experiencia"><i class="LogoEliminar-Experiencia fa-solid fa-trash"></i></a>
-            <div class = "ContenedorImagen-Experiencia">
-                <img class = "ImagenEmpresa-Experiencia" src="../../../assets/LogoNE.png" alt="">
-            </div>
-            <div class = "InfoTarjeta-Experiencia">
-                <h3 class = "TituloTarjeta-Experiencia">Nueva Electronica</h3>
-                <p class = "TextoTarjeta-Experiencia">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora qui mollitia voluptas, possimus consectetur tempore esse inventore eum obcaecati ducimus expedita neque harum aut sequi hic quibusdam alias officiis. Fuga.</p>
-            </div>
-        </div>
-        <div class = "Tarjeta-Experiencia">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Experiencia"><i class="LogoEditar-Experiencia fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Experiencia"><i class="LogoEliminar-Experiencia fa-solid fa-trash"></i></a>
-            <div class = "ContenedorImagen-Experiencia">
-                <img class = "ImagenEmpresa-Experiencia" src="../../../assets/LogoPensagro.png" alt="">
-            </div>
-            <div class = "InfoTarjeta-Experiencia">
-                <h3 class = "TituloTarjeta-Experiencia">Pensagro</h3>
-                <p class = "TextoTarjeta-Experiencia">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora qui mollitia voluptas, possimus consectetur tempore esse inventore eum obcaecati ducimus expedita neque harum aut sequi hic quibusdam alias officiis. Fuga.</p>
-            </div>
-        </div>
-        <div class = "TarjetaUltima-Experiencia">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Experiencia"><i class="LogoEditar-Experiencia fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Experiencia"><i class="LogoEliminar-Experiencia fa-solid fa-trash"></i></a>
-            <div class = "ContenedorImagen-Experiencia">
-                <img class = "ImagenEmpresa-Experiencia" src="../../../assets/LogoReselec.png" alt="">
-            </div>
-            <div class = "InfoTarjeta-Experiencia">
-                <h3 class = "TituloTarjeta-Experiencia">Reselec</h3>
-                <p class = "TextoTarjeta-Experiencia">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora qui mollitia voluptas, possimus consectetur tempore esse inventore eum obcaecati ducimus expedita neque harum aut sequi hic quibusdam alias officiis. Fuga.</p>
-            </div>
-        </div>
+        </div>  
     </div>
 </div>
 

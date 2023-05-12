@@ -1,0 +1,36 @@
+<!--
+<div class = "ContenedorElementos-Header">
+    <div class = "ContenedorOganizador-Header">
+        <div class = "ContenedorLogo-Header">
+            <a href=""><img class = "Logo-Header" src="../assets/APLogo.png" alt=""></a>
+            <h3 class = "TextoLogo-Header">#Yo programo</h3>
+        </div>
+    
+        <div class = "Navegador-Header">
+            <div class = "RedesSociales-Header">
+                <i class="LogoRed-Header fa-brands fa-instagram"></i>
+                <i class="LogoRed-Header fa-brands fa-facebook"></i>
+                <i class="LogoRed-Header fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = ContenedorElementos-Edit>
+    <div class = "ContenedorFlex-Edit">
+        <h3 class = "Titulo-Edit">Editar proyecto</h3>
+        <form class = "Form-Edit" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <input class = "Input-Edit" type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="proyecto.nombre" required>
+            <input class = "Input-Edit" type="text" name="descripcion" id="descripcion" placeholder="Descripcion" [(ngModel)]="proyecto.descripcion" required>
+            <div class = "ContenedorInputImg-Edit">
+                <label class = "Label-Edit" for="imagen">Cargar imagen</label>
+                <input class = "InputFile-Edit" type="file" name="imagen" id="imagen" [(ngModel)]="proyecto.descripcion" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">       
+            </div>
+            <button class = "Button-Edit" type = "submit">EDITAR</button>
+        </form>
+    </div>
+</div>
+
+<app-footer></app-footer>
+-->
+

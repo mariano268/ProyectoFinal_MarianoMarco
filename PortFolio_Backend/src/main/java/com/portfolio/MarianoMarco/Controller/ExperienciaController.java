@@ -4,6 +4,7 @@ import com.portfolio.MarianoMarco.Dto.dtoExperiencia;
 import com.portfolio.MarianoMarco.Entity.Experiencia;
 import com.portfolio.MarianoMarco.Interface.IExperienciaService;
 import com.portfolio.MarianoMarco.security.controller.Mensaje;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExperienciaController {
     @Autowired IExperienciaService iexperienciaService;
     
+    @GetMapping("/lista")
+    public ResponseEntity<List<Experiencia>> list() {
+        List<Experiencia> list = iexperienciaService.list();
+        return new ResponseEntity(list,HttpStatus.OK);
+    }
     @GetMapping("/detail/{id}")
     public ResponseEntity<Experiencia> getById(@PathVariable("id")int id){
         if(!iexperienciaService.existsById(id)) {
@@ -32,6 +38,8 @@ public class ExperienciaController {
         Experiencia experiencia = iexperienciaService.getOne(id).get();
         return new ResponseEntity(experiencia, HttpStatus.OK);
     }
+    
+    /*
     
     @PostMapping("/crear")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexperiencia) {
@@ -47,7 +55,7 @@ public class ExperienciaController {
         iexperienciaService.save(experiencia);
         
         return new ResponseEntity(new Mensaje("Experiencia guardada"), HttpStatus.OK);
-    }
+    }*/
     
     @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {

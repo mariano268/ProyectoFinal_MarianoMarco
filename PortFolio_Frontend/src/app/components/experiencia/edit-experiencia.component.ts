@@ -1,27 +1,27 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Persona } from 'src/app/models/persona.model';
+import { Experiencia } from 'src/app/models/experiencia.model';
+import { ExperienciaService } from 'src/app/services/experiencia.service';
 import { ImageService } from 'src/app/services/image.service';
-import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
-  selector: 'app-edit-acerca-de',
-  templateUrl: './edit-acerca-de.component.html',
-  styleUrls: ['./edit-acerca-de.component.css']
+  selector: 'app-edit-experiencia',
+  templateUrl: './edit-experiencia.component.html',
+  styleUrls: ['./edit-experiencia.component.css']
 })
-export class EditAcercaDeComponent {
-  persona: Persona = new Persona("","","","");
+export class EditExperienciaComponent {
+  experiencia: Experiencia = new Experiencia("","","");
 
 
   constructor(private activatedRouter: ActivatedRoute, 
-    private personaService: PersonaService, 
+    private experienciaService: ExperienciaService, 
     private router: Router,
     public imageService: ImageService) {}
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.personaService.detail(id).subscribe(data => {
-      this.persona = data;
+    this.experienciaService.detail(id).subscribe(data => {
+      this.experiencia = data;
     }, err => {
       alert("Error al modificar");
       this.router.navigate(['']);
@@ -32,12 +32,12 @@ export class EditAcercaDeComponent {
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     if(this.imageService.url != "") {
-      this.persona.imagen = this.imageService.url;
+      this.experiencia.imagen = this.imageService.url;
     }
-    this.personaService.update(id , this.persona).subscribe(data => {
+    this.experienciaService.update(id , this.experiencia).subscribe(data => {
       this.router.navigate(['']);
     }, err => {
-      alert ("Error al modificar la persona");
+      alert ("Error al modificar la experiencia");
       this.router.navigate(['']);
     })
     this.imageService.clearUrl();
@@ -45,7 +45,7 @@ export class EditAcercaDeComponent {
 
   uploadImage($event:any) {
     const id = this.activatedRouter.snapshot.params['id'];
-    const name = "fotoPerfil_" + id;
-    this.imageService.uploadImage($event, name);
+    const name = "fotoExperiencia_" + id;
+    this.imageService.uploadImageExperiencia($event, name , id);
   }
 }
