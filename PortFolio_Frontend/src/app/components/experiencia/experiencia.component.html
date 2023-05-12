@@ -1,6 +1,8 @@
 <div class = "ContenedorTotal-Experiencia">
     <div class = "ContenedorElementos-Experiencia">
-        <h3 class = Titulo-Experiencia>Experiencia</h3>
+        <div class = "ContenedorTitulo-Experiencia">
+            <h3 class = Titulo-Experiencia>Experiencia</h3>
+        </div>
         <div class = "ContenedorFor" *ngFor="let experiencia of experiencia">
             <div class = "Tarjeta-Experiencia">
                 <a *ngIf="isAdmin" routerLink="/editExperiencia/{{experiencia.id}}" class = "Editar-Experiencia"><i class="LogoEditar-Experiencia fa-solid fa-pencil"></i></a>

@@ -25,22 +25,11 @@ export class ImageService {
     .catch(error => console.log(error))
   }
 
-  getImagesExperiencia(id: number) {
-    const imagesRef = ref(this.storage, "experiencia");
-    list(imagesRef)
-    /*.then(async response => {
-      for(let item of response.items) {
-        this.url = await getDownloadURL(item);
-        console.log("La url es: " + this.url);
-      }
-    }*/
-    .then(async response => {
-      for(let i = 0 ; i < id ; i++) {
-        this.url = await getDownloadURL(response.items[i]);
-        console.log("La url es: " + this.url);
-      }
-    }
-    )
+  public uploadImageEducacion($event: any, name: string , id: number) {
+    const file = $event.target.files[0];
+    const imgRef = ref(this.storage, `educacion/`+ name);
+    uploadBytes(imgRef,file)
+    .then(response => {this.getImagesEducacion(id)})
     .catch(error => console.log(error))
   }
 
@@ -56,7 +45,29 @@ export class ImageService {
     .catch(error => console.log(error))
   }
 
-  clearUrl() {
-    this.url = "";
+  getImagesExperiencia(id: number) {
+    const imagesRef = ref(this.storage, "experiencia");
+    list(imagesRef)
+    .then(async response => {
+      for(let i = 0 ; i < id ; i++) {
+        this.url = await getDownloadURL(response.items[i]);
+        console.log("La url es: " + this.url);
+      }
+    }
+    )
+    .catch(error => console.log(error))
+  }
+
+  getImagesEducacion(id: number) {
+    const imagesRef = ref(this.storage, "educacion");
+    list(imagesRef)
+    .then(async response => {
+      for(let i = 0 ; i < id ; i++) {
+        this.url = await getDownloadURL(response.items[i]);
+        console.log("La url es: " + this.url);
+      }
+    }
+    )
+    .catch(error => console.log(error))
   }
 }

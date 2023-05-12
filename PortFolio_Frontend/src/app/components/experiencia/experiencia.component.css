@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     max-width: 340px;
     margin: auto;
     border: 1px solid #eee;
@@ -14,10 +15,22 @@
     padding: 10px;
 }
 
+.ContendorTitulo-Experiencia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .Titulo-Experiencia {
     font-family: 'Roboto' , sans-serif;
     color: #363636;
     font-size: 18px;
+}
+
+.ContenedorFor {
+    width: 100%;
 }
 
 .Tarjeta-Experiencia {
@@ -30,21 +43,16 @@
     padding-top: 0px;
     border-bottom: 1px solid #eee;
     position: relative;
-}
-
-.TarjetaUltima-Experiencia {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    padding-top: 0px;
-    position: relative;
+    width: 100%;
 }
 
 .ContenedorImagen-Experiencia {
     padding: 10px;
+}
+
+.InfoTarjeta-Experiencia {
+    height: 100%;
+    width: 100%;
 }
 
 .ImagenEmpresa-Experiencia {
@@ -64,6 +72,7 @@
     color: #363636;
     font-size: 14px;
     text-align: justify;
+    width: 100%;
 }
 
 .Editar-Experiencia {
@@ -119,6 +128,7 @@
 
     .Tarjeta-Experiencia {
         flex-direction: row;
+        align-items: flex-start;
         justify-content: space-evenly;
         padding: 10px;
     }
@@ -174,6 +184,10 @@
 
     .ContenedorElementos-Experiencia {
         max-width: 1140px;
+    }
+
+    .Tarjeta-Experiencia {
+        width: 100%;
     }
 
     .ContenedorImagen-Experiencia {

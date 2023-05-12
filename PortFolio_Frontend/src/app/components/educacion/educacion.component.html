@@ -1,48 +1,19 @@
 <div class = "ContenedorTotal-Educacion">
     <div class = "ContenedorElementos-Educacion">
-        <h3 class = Titulo-Educacion>Educacion</h3>
-        <div class = "Tarjeta-Educacion">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Educacion"><i class="LogoEditar-Educacion fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Educacion"><i class="LogoEliminar-Educacion fa-solid fa-trash"></i></a>
-            <div class = "ContenedorImagen-Educacion">
-                <img class = "ImagenEmpresa-Educacion" src="../../../assets/LogoEEST8.jpg" alt="">
-            </div>
-            <div class = "InfoTarjeta-Educacion">
-                <h3 class = "TituloTarjeta-Educacion">E.E.S.T N°8</h3>
-                <p class = "TextoTarjeta-Educacion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora qui mollitia voluptas, possimus consectetur tempore esse inventore eum obcaecati ducimus expedita neque harum aut sequi hic quibusdam alias officiis. Fuga.</p>
-            </div>
+        <div class = "ContenedorTitulo-Educacion">
+            <h3 class = Titulo-Educacion>Educacion</h3>
         </div>
-        <div class = "Tarjeta-Educacion">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Educacion"><i class="LogoEditar-Educacion fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Educacion"><i class="LogoEliminar-Educacion fa-solid fa-trash"></i></a>
-            <div class = "ContenedorImagen-Educacion">
-                <img class = "ImagenEmpresa-Educacion" src="../../../assets/LogoUTN.jpg" alt="">
-            </div>
-            <div class = "InfoTarjeta-Educacion">
-                <h3 class = "TituloTarjeta-Educacion">UTN Haedo</h3>
-                <p class = "TextoTarjeta-Educacion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora qui mollitia voluptas, possimus consectetur tempore esse inventore eum obcaecati ducimus expedita neque harum aut sequi hic quibusdam alias officiis. Fuga.</p>
-            </div>
-        </div>
-        <div class = "Tarjeta-Educacion">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Educacion"><i class="LogoEditar-Educacion fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Educacion"><i class="LogoEliminar-Educacion fa-solid fa-trash"></i></a>
-            <div class = "ContenedorImagen-Educacion">
-                <img class = "ImagenEmpresa-Educacion" src="../../../assets/LogoElectroComponentes.jpg" alt="">
-            </div>
-            <div class = "InfoTarjeta-Educacion">
-                <h3 class = "TituloTarjeta-Educacion">Electrocomponentes</h3>
-                <p class = "TextoTarjeta-Educacion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora qui mollitia voluptas, possimus consectetur tempore esse inventore eum obcaecati ducimus expedita neque harum aut sequi hic quibusdam alias officiis. Fuga.</p>
-            </div>
-        </div>
-        <div class = "TarjetaUltima-Educacion">
-            <a *ngIf="isAdmin" href="#" class = "Editar-Educacion"><i class="LogoEditar-Educacion fa-solid fa-pencil"></i></a>
-            <a *ngIf="isAdmin" href="#" class = "Eliminar-Educacion"><i class="LogoEliminar-Educacion fa-solid fa-trash"></i></a>
-            <div class = "ContenedorImagen-Educacion">
-                <img class = "ImagenEmpresa-Educacion" src="../../../assets/LogoDigitalHouse.png" alt="">
-            </div>
-            <div class = "InfoTarjeta-Educacion">
-                <h3 class = "TituloTarjeta-Educacion">Digital House</h3>
-                <p class = "TextoTarjeta-Educacion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora qui mollitia voluptas, possimus consectetur tempore esse inventore eum obcaecati ducimus expedita neque harum aut sequi hic quibusdam alias officiis. Fuga.</p>
+        <div class = "ContenedorFor" *ngFor="let educacion of educacion">
+            <div class = "Tarjeta-Educacion">
+                <a *ngIf="isAdmin" routerLink="/editEducacion/{{educacion.id}}" class = "Editar-Educacion"><i class="LogoEditar-Educacion fa-solid fa-pencil"></i></a>
+                <a *ngIf="isAdmin" (click)="delete(educacion.id)" class = "Eliminar-Educacion"><i class="LogoEliminar-Educacion fa-solid fa-trash"></i></a>
+                <div class = "ContenedorImagen-Educacion">
+                    <img class = "ImagenEmpresa-Educacion" src="{{educacion.imagen}}" alt="">
+                </div>
+                <div class = "InfoTarjeta-Educacion">
+                    <h3 class = "TituloTarjeta-Educacion">{{educacion.nombre}}</h3>
+                    <p class = "TextoTarjeta-Educacion">{{educacion.descripcion}}</p>
+                </div>
             </div>
         </div>
     </div>

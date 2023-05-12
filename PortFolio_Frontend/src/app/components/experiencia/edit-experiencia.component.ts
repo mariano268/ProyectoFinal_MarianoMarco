@@ -26,7 +26,6 @@ export class EditExperienciaComponent {
       alert("Error al modificar");
       this.router.navigate(['']);
     })
-    this.imageService.clearUrl();
   }
 
   onUpdate(): void {
@@ -40,7 +39,6 @@ export class EditExperienciaComponent {
       alert ("Error al modificar la experiencia");
       this.router.navigate(['']);
     })
-    this.imageService.clearUrl();
   }
 
   uploadImage($event:any) {
