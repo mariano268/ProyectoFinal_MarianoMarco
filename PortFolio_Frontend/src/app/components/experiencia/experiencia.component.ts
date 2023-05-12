@@ -29,4 +29,16 @@ export class ExperienciaComponent implements OnInit{
       console.log(this.experiencia);
     })
   }
+
+  delete(id?: number) {
+    if (id != undefined) {
+      this.experienciaService.delete(id).subscribe(
+        data => {
+          this.cargarExperiencia();
+        }, err => {
+          alert("No se pudo borrar la experiencia");
+        }
+      )
+    }
+  }
 }

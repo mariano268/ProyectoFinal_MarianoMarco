@@ -29,6 +29,7 @@ public class ExperienciaController {
         List<Experiencia> list = iexperienciaService.list();
         return new ResponseEntity(list,HttpStatus.OK);
     }
+    
     @GetMapping("/detail/{id}")
     public ResponseEntity<Experiencia> getById(@PathVariable("id")int id){
         if(!iexperienciaService.existsById(id)) {
@@ -38,8 +39,6 @@ public class ExperienciaController {
         Experiencia experiencia = iexperienciaService.getOne(id).get();
         return new ResponseEntity(experiencia, HttpStatus.OK);
     }
-    
-    /*
     
     @PostMapping("/crear")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexperiencia) {
@@ -55,7 +54,7 @@ public class ExperienciaController {
         iexperienciaService.save(experiencia);
         
         return new ResponseEntity(new Mensaje("Experiencia guardada"), HttpStatus.OK);
-    }*/
+    }
     
     @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {

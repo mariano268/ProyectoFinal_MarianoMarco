@@ -4,7 +4,7 @@
         <div class = "ContenedorFor" *ngFor="let experiencia of experiencia">
             <div class = "Tarjeta-Experiencia">
                 <a *ngIf="isAdmin" routerLink="/editExperiencia/{{experiencia.id}}" class = "Editar-Experiencia"><i class="LogoEditar-Experiencia fa-solid fa-pencil"></i></a>
-                <a *ngIf="isAdmin" href="#" class = "Eliminar-Experiencia"><i class="LogoEliminar-Experiencia fa-solid fa-trash"></i></a>
+                <a *ngIf="isAdmin" (click)="delete(experiencia.id)" class = "Eliminar-Experiencia"><i class="LogoEliminar-Experiencia fa-solid fa-trash"></i></a>
                 <div class = "ContenedorImagen-Experiencia">
                     <img class = "ImagenEmpresa-Experiencia" src="{{experiencia.imagen}}" alt="">
                 </div>
